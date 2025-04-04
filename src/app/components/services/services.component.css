@@ -1,0 +1,65 @@
+.services-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #E8DBC8;
+  }
+  
+  .services-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);  /* Effet de soulèvement */
+    background-color: #e0d4f7;  /* Couleur violette claire au survol */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    color: #5c3d8d;  /* Couleur violette */
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .card button {
+    background-color: #5c3d8d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .card button:hover {
+    background-color: #4a2a72; /* Couleur au survol du bouton */
+  }
+  
+  h2 {
+    color: #5c3d8d;  /* Couleur violette pour le titre des services */
+    margin-bottom: 20px;  /* Espace sous le titre */
+  }

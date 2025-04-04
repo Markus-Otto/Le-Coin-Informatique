@@ -1,0 +1,13 @@
+<div class="services-container">
+    <h2>Mes services</h2>
+    <div class="services-cards">
+      <div class="card" *ngFor="let service of services">
+        <!-- Utilisation de l'icône Bootstrap en utilisant la classe dynamique -->
+        <i [class]="service.icon" style="font-size: 40px; color: #5c3d8d;"></i>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        <!--<button>En Savoir plus →</button>-->
+      </div>
+    </div>
+  </div>
+  

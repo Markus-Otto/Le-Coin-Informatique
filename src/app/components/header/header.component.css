@@ -1,6 +1,6 @@
 /* Navbar */
 .navbar {
-    background-color: #f5f0e1;  /* Beige clair */
+    background-color: #E8DBC8;  /* Beige clair */
     padding: 5px 50px;  /* Espacement du header */
     display: flex;
     justify-content: space-between;  /* Met le logo à gauche et les boutons à droite */
