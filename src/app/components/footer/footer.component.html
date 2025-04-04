@@ -1,1 +1,20 @@
-<p>footer works!</p>
+<!-- footer.component.html -->
+<footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Le Coin Informatique. Tous droits réservés.</p>
+      <button class="mentions-button" (click)="openModal()">Mentions Légales</button>
+    </div>
+  </footer>
+  
+  <!-- Modal -->
+  <div class="modal" [ngClass]="{'is-active': isModalOpen}">
+    <div class="modal-background" (click)="closeModal()"></div>
+    <div class="modal-content">
+      <div class="box">
+        <h2>Mentions Légales</h2>
+        <p>Les informations légales de l'entreprise et autres informations importantes.</p>
+        <button class="button" (click)="closeModal()">Fermer</button>
+      </div>
+    </div>
+  </div>
+  

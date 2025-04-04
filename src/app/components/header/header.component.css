@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;  /* Met le logo à gauche et les boutons à droite */
     align-items: center;  /* Aligne les éléments verticalement */
+    height: 80px;  /* Hauteur du header */
   }
   
   .logo {

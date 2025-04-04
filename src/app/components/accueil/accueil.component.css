@@ -1,17 +1,33 @@
-/* Style du container principal */
-.accueil-container {
-    text-align: center;
-    padding: 50px;
-    background-image: url('/assets/images/hero_arriereplan.png'); /* Image d'arrière-plan */
-    background-size: cover;
-    color: white;  /* Texte en blanc */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
+  /* Style du container principal */
+  .accueil-container {
+    text-align: center;
+    width: 100%;
+    height: calc(100vh - 80px); /* Ajuste la hauteur en soustrayant la hauteur du header */
+    overflow: hidden; /* Cela garantit que rien ne déborde */
+    background-image: url('/assets/images/hero_arriereplan.png'); /* Image d'arrière-plan */
+    background-size: cover; /* Redimensionner l'image pour couvrir le conteneur */
+    background-position: center center; /* Centrer l'image */
+    color: white;  /* Texte en blanc */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer le contenu verticalement */
+    align-items: center; /* Centrer le contenu horizontalement */
+    padding: 20px; /* Ajout de padding pour le contenu */
+  }
+  
+  /* Titre du hero */
   .accueil-container h1 {
     font-size: 48px;
     font-weight: bold;
-    margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre légère au texte */
+    margin-bottom: 20px; /* Espace sous le titre */
+    text-align: center; /* S'assurer que le texte est bien centré */
   }
   
   /* Container des boutons */
@@ -19,6 +35,7 @@
     display: flex;
     justify-content: center;
     gap: 20px;  /* Espacement entre les boutons */
+    margin-top: 20px; /* Espace au-dessus des boutons */
   }
   
   .button-container button {
