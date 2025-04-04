@@ -1,12 +1,12 @@
-<p>header works!</p>
-
 <div class="navbar">
+    <div class="logo">
+        <img src="assets/logo.png" alt="Logo de Le Coin Informatique" />
+    </div>
     <ul>
-        <!-- header.component.html -->
-        <button (click)="scrollToSection('section1')">Aller à Section 1</button>
-        <button (click)="scrollToSection('section2')">Aller à Section 2</button>
-        <button (click)="scrollToSection('section3')">Aller à Section 3</button>
-        <li><a routerLink="/">À propos</a></li>
-        <li><a routerLink="/articles">Contact</a></li>
+        <li><button (click)="scrollToSection('section1')">Accueil</button></li>
+        <li><button (click)="scrollToSection('section2')">Services</button></li>
+        <li><button (click)="scrollToSection('section3')">Boutiques</button></li>
+        <li><button (click)="scrollToSection('section4')">À propos</button></li>
+        <li><button (click)="scrollToSection('section5')">Contact</button></li>
     </ul>
 </div>

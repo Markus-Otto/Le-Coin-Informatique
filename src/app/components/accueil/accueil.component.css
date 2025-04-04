@@ -1,0 +1,45 @@
+/* Style du container principal */
+.accueil-container {
+    text-align: center;
+    padding: 50px;
+    background-image: url('/assets/images/hero_arriereplan.png'); /* Image d'arrière-plan */
+    background-size: cover;
+    color: white;  /* Texte en blanc */
+  }
+  
+  .accueil-container h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre légère au texte */
+  }
+  
+  /* Container des boutons */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* Espacement entre les boutons */
+  }
+  
+  .button-container button {
+    background-color: white;  /* Fond blanc par défaut */
+    color: #5c3d8d;  /* Texte violet */
+    border: 2px solid #5c3d8d;  /* Bordure violette */
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;  /* Transition fluide */
+  }
+  
+  .button-container button:hover {
+    background-color: #5c3d8d;  /* Fond violet au survol */
+    color: white;  /* Texte blanc au survol */
+  }
+  
+  .button-container button:focus {
+    outline: none;  /* Retirer le contour de focus par défaut */
+    box-shadow: 0 0 5px rgba(92, 61, 141, 0.6);  /* Ombre lors du focus */
+  }
+  

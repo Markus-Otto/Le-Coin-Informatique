@@ -1,0 +1,49 @@
+/* Navbar */
+.navbar {
+    background-color: #f5f0e1;  /* Beige clair */
+    padding: 5px 50px;  /* Espacement du header */
+    display: flex;
+    justify-content: space-between;  /* Met le logo à gauche et les boutons à droite */
+    align-items: center;  /* Aligne les éléments verticalement */
+  }
+  
+  .logo {
+    width: 100px;  /* Largeur de l'image */
+    height: auto;  /* Hauteur automatique pour garder les proportions */
+  }
+  
+  .navbar ul {
+    margin: 0;  /* Retirer les marges par défaut */
+    list-style-type: none;  /* Supprimer les puces */
+    display: flex;
+    gap: 20px;  /* Espacement entre les boutons */
+  }
+  
+  .navbar li {
+    display: inline-block;
+  }
+  
+  /* Style du bouton par défaut */
+  .navbar button {
+    background-color: transparent;  /* Pas de fond */
+    color: black;  /* Texte noir */
+    border: 2px solid #5c3d8d;  /* Contour violet */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;  /* Transition fluide */
+  }
+  
+  /* Style du bouton au survol */
+  .navbar button:hover {
+    background-color: #4F3DB9;  /* Fond violet au survol */
+    color: white;  /* Texte blanc au survol */
+  }
+  
+  .navbar button:focus {
+    outline: none;  /* Retirer le contour de focus par défaut */
+    box-shadow: 0 0 5px rgba(92, 61, 141, 0.6);  /* Ombre subtile lors du focus */
+  }
+    
