@@ -1,13 +1,31 @@
 <div class="services-container">
-    <h2>Mes services</h2>
-    <div class="services-cards">
-      <div class="card" *ngFor="let service of services">
-        <!-- Utilisation de l'icône Bootstrap en utilisant la classe dynamique -->
-        <i [class]="service.icon" style="font-size: 40px; color: #5c3d8d;"></i>
-        <h3>{{ service.title }}</h3>
-        <p>{{ service.description }}</p>
-        <!--<button>En Savoir plus →</button>-->
-      </div>
+  <h2>Mes services</h2>
+  <div class="services-cards">
+    <div class="card" *ngFor="let service of services">
+      <i [class]="service.icon" style="font-size: 40px; color: #5c3d8d;"></i>
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
+      <!--<button>En Savoir plus →</button>-->
     </div>
   </div>
   
+  <!-- Atelier et tarif section -->
+  <div class="atelier-tarif">
+    <div class="atelier-container">
+      <img src="assets/images/image_atelier.jpg" alt="Atelier" class="atelier-image">
+      <div class="tarif-info">
+        <h3>Atelier et tarif</h3>
+        <ul>
+          <li>Forfait Check Annuel - 80€</li>
+          <li>Forfait Check Ponctuel - 95€</li>
+          <li>Forfait pour une installation - 90€</li>
+          <li>Forfait pour une sauvegarde - 80€</li>
+          <li>Forfait pour un montage - 80€</li>
+          <li>Forfait pour une réparation Mac - 200€</li>
+          <li>Forfait Sauvegarde Approfondie - 200€</li>
+          <li>Prix horaire - 70€</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

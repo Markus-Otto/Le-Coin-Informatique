@@ -1,65 +1,112 @@
 .services-container {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #E8DBC8;
-  }
-  
-  .services-cards {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);  /* Effet de soulèvement */
-    background-color: #e0d4f7;  /* Couleur violette claire au survol */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-  }
-  
-  .card h3 {
-    font-size: 18px;
-    color: #5c3d8d;  /* Couleur violette */
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-  }
-  
-  .card button {
-    background-color: #5c3d8d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .card button:hover {
-    background-color: #4a2a72; /* Couleur au survol du bouton */
-  }
-  
-  h2 {
-    color: #5c3d8d;  /* Couleur violette pour le titre des services */
-    margin-bottom: 20px;  /* Espace sous le titre */
-  }
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #E8DBC8;
+}
+
+.services-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);  /* Effet de soulèvement */
+  background-color: #e0d4f7;  /* Couleur violette claire au survol */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #5c3d8d;  /* Couleur violette */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background-color: #5c3d8d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card button:hover {
+  background-color: #4a2a72; /* Couleur au survol du bouton */
+}
+
+h2 {
+  color: #5c3d8d;  /* Couleur violette pour le titre des services */
+  margin-bottom: 20px;  /* Espace sous le titre */
+}
+
+/* Atelier et tarif section */
+.atelier-tarif {
+  margin-top: 50px;
+}
+
+.atelier-container {
+  position: relative;
+  display: inline-block;
+}
+
+.atelier-image {
+  width: 100%; 
+  height: auto;
+  border-radius: 10px; 
+  transition: all 0.3s ease;
+}
+
+
+.tarif-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond sombre transparent */
+  color: white;
+  opacity: 0;  /* Masqué par défaut */
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.atelier-container:hover .tarif-info {
+  opacity: 1;  /* Afficher le texte lors du survol */
+}
+
+.tarif-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tarif-info li {
+  font-size: 18px;
+  margin: 10px 0;
+}
