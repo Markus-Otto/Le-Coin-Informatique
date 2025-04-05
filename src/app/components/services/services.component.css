@@ -5,6 +5,7 @@
 }
 
 .services-cards {
+  margin-top: 2.5%;
   display: flex;
   justify-content: space-around;
   gap: 20px;
@@ -59,10 +60,25 @@
   background-color: #4a2a72;
 }
 
-h2 {
+.UL {
+  position: relative;
   color: #5c3d8d;
   margin-bottom: 20px;
 }
+
+.UL::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Ajuste cette valeur pour placer l'underline plus bas */
+  left: 50%;
+  transform: translateX(-50%); /* Pour centrer l'underline horizontalement */
+  width: 10%; /* Largeur de l'underline */
+  height: 3px; /* Épaisseur de l'underline */
+  background-color: #5c3d8d;
+  border-radius: 2px; /* Pour arrondir les bords de l'underline */
+}
+
+
 
 .atelier-tarif {
   margin-top: 50px;
