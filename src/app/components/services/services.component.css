@@ -69,16 +69,14 @@
 .UL::after {
   content: '';
   position: absolute;
-  bottom: -5px; /* Ajuste cette valeur pour placer l'underline plus bas */
+  bottom: -5px;
   left: 50%;
-  transform: translateX(-50%); /* Pour centrer l'underline horizontalement */
-  width: 10%; /* Largeur de l'underline */
-  height: 3px; /* Épaisseur de l'underline */
+  transform: translateX(-50%);
+  width: 10%;
+  height: 3px;
   background-color: #5c3d8d;
-  border-radius: 2px; /* Pour arrondir les bords de l'underline */
+  border-radius: 2px;
 }
-
-
 
 .atelier-tarif {
   margin-top: 50px;
@@ -91,16 +89,65 @@
   overflow: hidden;
 }
 
-.atelier-container h2 {
+.infotarif {
   position: absolute;
   bottom: 20px;
   left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.infotarif h2 {
   color: white;
   font-size: 3rem;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  z-index: 2;
   margin: 0;
   pointer-events: none;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.infotarif .arrow {
+  rotate: 180deg;
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid white;
+  border-top: 3px solid white;
+  transform: rotate(135deg);
+  animation: arrow-bounce 1s infinite;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+
+@keyframes arrow-bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(135deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(135deg);
+  }
+}
+
+.atelier-container:hover .infotarif {
+  transform: translateY(-20px);
+}
+
+.atelier-container:hover .arrow {
+  transform: translateY(0) rotate(135deg);
+  animation: none;
+  opacity: 0;
+}
+
+.atelier-container:hover .infotarif h2 {
+  transform: translateY(20px);
+  opacity: 0.7;
 }
 
 .atelier-image {
@@ -108,8 +155,12 @@
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   filter: brightness(0.7);
+}
+
+.atelier-container:hover .atelier-image {
+  filter: brightness(0.5);
 }
 
 .tarif-info {
@@ -121,17 +172,19 @@
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 20px;
   text-align: center;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  transform: translateY(20px);
 }
 
 .atelier-container:hover .tarif-info {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .tarif-info ul {
@@ -149,7 +202,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.atelier-container:hover .tarif-info li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tarif-info li:nth-child(1) { transition-delay: 0.1s; }
+.tarif-info li:nth-child(2) { transition-delay: 0.2s; }
+.tarif-info li:nth-child(3) { transition-delay: 0.3s; }
+.tarif-info li:nth-child(4) { transition-delay: 0.4s; }
+.tarif-info li:nth-child(5) { transition-delay: 0.5s; }
+.tarif-info li:nth-child(6) { transition-delay: 0.6s; }
+.tarif-info li:nth-child(7) { transition-delay: 0.7s; }
+.tarif-info li:nth-child(8) { transition-delay: 0.8s; }
 
 .tarif-info li span.price {
   font-weight: bold;
