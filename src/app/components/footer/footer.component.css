@@ -16,8 +16,10 @@
   }
   
   .footer-content p {
+    margin-top: auto;
+    margin-bottom: auto;
     margin: 0;
-    font-size: 14px;
+    font-size: 1rem;
   }
   
   .mentions-button {

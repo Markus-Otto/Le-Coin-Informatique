@@ -22,8 +22,8 @@
 }
 
 .card:hover {
-  transform: translateY(-10px);  /* Effet de soulèvement */
-  background-color: #e0d4f7;  /* Couleur violette claire au survol */
+  transform: translateY(-10px);
+  background-color: #e0d4f7;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -35,7 +35,7 @@
 
 .card h3 {
   font-size: 18px;
-  color: #5c3d8d;  /* Couleur violette */
+  color: #5c3d8d;
   margin-bottom: 10px;
 }
 
@@ -56,45 +56,45 @@
 }
 
 .card button:hover {
-  background-color: #4a2a72; /* Couleur au survol du bouton */
+  background-color: #4a2a72;
 }
 
 h2 {
-  color: #5c3d8d;  /* Couleur violette pour le titre des services */
-  margin-bottom: 20px;  /* Espace sous le titre */
+  color: #5c3d8d;
+  margin-bottom: 20px;
 }
 
-/* Atelier et tarif section */
 .atelier-tarif {
   margin-top: 50px;
 }
 
 .atelier-container {
   position: relative;
-  width: 100%;  /* Prend toute la largeur du parent */
-  height: 400px;  /* Hauteur personnalisée, ajuste selon le besoin */
-  overflow: hidden;  /* Cache l'image si elle déborde du conteneur */
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
 }
 
-.atelier-container h2{
+.atelier-container h2 {
   position: absolute;
-  bottom: 10px;  /* Positionne le titre en haut du conteneur */
-  left: 10px;  /* Positionne le titre à gauche du conteneur */
-  color: white;  /* Couleur du texte */
-  font-size: 24px;  /* Taille de la police */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Ombre pour le texte */
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  z-index: 2;
+  margin: 0;
+  pointer-events: none;
 }
 
 .atelier-image {
-  width: 100%;  /* Prend toute la largeur du conteneur */
-  height: 100%;  /* Prend toute la hauteur du conteneur */
-  object-fit: cover;  /* Remplir le conteneur tout en conservant le ratio de l'image */
-  border-radius: 10px;  /* Pour arrondir les coins */
-  transition: all 0.3s ease;  /* Pour les transitions douces */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  filter: brightness(0.7);
 }
-
-
-
 
 .tarif-info {
   position: absolute;
@@ -102,28 +102,40 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.675); /* Fond sombre transparent */
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  opacity: 0;  /* Masqué par défaut */
+  opacity: 0;
   transition: opacity 0.3s ease;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .atelier-container:hover .tarif-info {
-  opacity: 1;  /* Afficher le texte lors du survol */
+  opacity: 1;
 }
 
 .tarif-info ul {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 50%;
+  width: 40%;
   list-style-type: none;
   padding: 0;
+  margin-right: 5%;
 }
 
 .tarif-info li {
-  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  font-size: 1.39rem;
   margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tarif-info li span.price {
+  font-weight: bold;
+  margin-left: 20px;
 }
