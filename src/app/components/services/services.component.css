@@ -71,15 +71,29 @@ h2 {
 
 .atelier-container {
   position: relative;
-  display: inline-block;
+  width: 100%;  /* Prend toute la largeur du parent */
+  height: 400px;  /* Hauteur personnalisée, ajuste selon le besoin */
+  overflow: hidden;  /* Cache l'image si elle déborde du conteneur */
+}
+
+.atelier-container h2{
+  position: absolute;
+  bottom: 10px;  /* Positionne le titre en haut du conteneur */
+  left: 10px;  /* Positionne le titre à gauche du conteneur */
+  color: white;  /* Couleur du texte */
+  font-size: 24px;  /* Taille de la police */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Ombre pour le texte */
 }
 
 .atelier-image {
-  width: 100%; 
-  height: auto;
-  border-radius: 10px; 
-  transition: all 0.3s ease;
+  width: 100%;  /* Prend toute la largeur du conteneur */
+  height: 100%;  /* Prend toute la hauteur du conteneur */
+  object-fit: cover;  /* Remplir le conteneur tout en conservant le ratio de l'image */
+  border-radius: 10px;  /* Pour arrondir les coins */
+  transition: all 0.3s ease;  /* Pour les transitions douces */
 }
+
+
 
 
 .tarif-info {
@@ -88,7 +102,7 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond sombre transparent */
+  background-color: rgba(0, 0, 0, 0.675); /* Fond sombre transparent */
   color: white;
   opacity: 0;  /* Masqué par défaut */
   transition: opacity 0.3s ease;
@@ -102,6 +116,9 @@ h2 {
 }
 
 .tarif-info ul {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50%;
   list-style-type: none;
   padding: 0;
 }
