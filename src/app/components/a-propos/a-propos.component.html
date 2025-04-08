@@ -1,1 +1,58 @@
-<p>a-propos works!</p>
+<div class="container-propos">
+    <div class="img-container">
+        <img src="assets/img/IMG-B.png" alt="Notre atelier informatique" class="img-about" loading="lazy" />
+    </div>
+    <div class="content-propos">
+        <h1 class="title">À propos</h1>
+        <p class="description">
+            Boutique ouverte depuis 2018, nous avons pour but de vous aider à trouver le matériel informatique qui vous correspond le mieux. Que ce soit pour un PC gamer, un PC de bureau ou un PC portable, nous avons ce qu'il vous faut ! Nous sommes là pour vous conseiller et vous aider à faire le bon choix.
+        </p>
+        <!--<button 
+            class="button-primary"
+            (click)="openModal()"
+            aria-label="En savoir plus à propos de nous">
+            En savoir plus
+        </button>-->
+    </div>
+</div>
+
+<!-- Modal -->
+<div 
+    class="modal-backdrop" 
+    *ngIf="isModalOpen" 
+    (click)="onBackdropClick($event)"
+    role="dialog"
+    aria-labelledby="modalTitle"
+    aria-modal="true">
+    <div 
+        #modalContent
+        class="modal" 
+        [@modalAnimation]
+        tabindex="0"
+        (keydown)="onKeydown($event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" class="title">À propos de nous</h2>
+                <button 
+                    class="close-button" 
+                    (click)="closeModal()"
+                    aria-label="Fermer la fenêtre">
+                    ×
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="img-container">
+                    <img src="assets/img/IMG-B.png" alt="Notre équipe au travail" class="img-about" loading="lazy" />
+                </div>
+                <div class="content-propos">
+                    <p class="description">
+                        Bienvenue sur notre site ! Nous sommes une équipe passionnée par la technologie et l'informatique. Notre objectif est de partager nos connaissances et notre expertise avec vous.
+                    </p>
+                    <p class="description">
+                        Nous croyons que l'informatique est un outil puissant qui peut transformer des vies et des entreprises. C'est pourquoi nous nous engageons à fournir des ressources utiles, des conseils pratiques et des informations à jour sur les dernières tendances technologiques.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
