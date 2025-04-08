@@ -12,3 +12,9 @@ body, html {
     box-sizing: border-box;
   }
   
+  /* Add application styles & imports to this file! */
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Ajoute un padding égal à la hauteur du header */
+}

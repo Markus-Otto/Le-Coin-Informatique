@@ -1,50 +1,179 @@
 /* Navbar */
 .navbar {
-    background-color: #E8DBC8;  /* Beige clair */
-    padding: 5px 50px;  /* Espacement du header */
-    display: flex;
-    justify-content: space-between;  /* Met le logo à gauche et les boutons à droite */
-    align-items: center;  /* Aligne les éléments verticalement */
-    height: 80px;  /* Hauteur du header */
+  background-color: #E8DBC8;
+  padding: 5px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+/* Style du bouton par défaut */
+.navbar button:not(.burger-menu) {
+  background-color: transparent;
+  color: black;
+  border: 2px solid #5c3d8d;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Style du bouton au survol */
+.navbar button:not(.burger-menu):hover {
+  background-color: #4F3DB9;
+  color: white;
+}
+
+.navbar button:not(.burger-menu):focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(92, 61, 141, 0.6);
+}
+
+/* Burger Menu */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none !important;
+  cursor: pointer;
+  padding: 15px !important;
+  z-index: 1001;
+  position: relative;
+  margin-left: auto;
+}
+
+.burger-menu span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #5c3d8d;
+  transition: all 0.3s ease;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.burger-menu span:nth-child(1) {
+  top: 25%;
+}
+
+.burger-menu span:nth-child(2) {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.burger-menu span:nth-child(3) {
+  bottom: 25%;
+}
+
+/* Media Queries pour le responsive */
+@media screen and (max-width: 768px) {
+  .navbar {
+      padding: 5px 20px;
   }
-  
-  .logo {
-    width: 100px;  /* Largeur de l'image */
-    height: auto;  /* Hauteur automatique pour garder les proportions */
+
+  .burger-menu {
+      display: flex;
   }
-  
+
   .navbar ul {
-    margin: 0;  /* Retirer les marges par défaut */
-    list-style-type: none;  /* Supprimer les puces */
-    display: flex;
-    gap: 20px;  /* Espacement entre les boutons */
+      display: none;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background-color: #E8DBC8;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      gap: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-  
+
+  .navbar ul.active {
+      display: flex;
+  }
+
   .navbar li {
-    display: inline-block;
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
   }
-  
-  /* Style du bouton par défaut */
-  .navbar button {
-    background-color: transparent;  /* Pas de fond */
-    color: black;  /* Texte noir */
-    border: 2px solid #5c3d8d;  /* Contour violet */
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;  /* Transition fluide */
+
+  .navbar li:nth-child(1) { animation-delay: 0.1s; }
+  .navbar li:nth-child(2) { animation-delay: 0.2s; }
+  .navbar li:nth-child(3) { animation-delay: 0.3s; }
+  .navbar li:nth-child(4) { animation-delay: 0.4s; }
+  .navbar li:nth-child(5) { animation-delay: 0.5s; }
+
+  .navbar button:not(.burger-menu) {
+      width: 80%;
+      margin: 5px 0;
   }
-  
-  /* Style du bouton au survol */
-  .navbar button:hover {
-    background-color: #4F3DB9;  /* Fond violet au survol */
-    color: white;  /* Texte blanc au survol */
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(-10px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
   }
-  
-  .navbar button:focus {
-    outline: none;  /* Retirer le contour de focus par défaut */
-    box-shadow: 0 0 5px rgba(92, 61, 141, 0.6);  /* Ombre subtile lors du focus */
-  }
-    
+}
+
+/* Animation du burger menu */
+.burger-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  bottom: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
