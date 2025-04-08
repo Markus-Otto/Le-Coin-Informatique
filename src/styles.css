@@ -1,20 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global reset et mise en page */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-}
-
-* {
-    margin: 0;
-    padding: 0;
+  }
+  
+  * {
     box-sizing: border-box;
   }
   
-  /* Add application styles & imports to this file! */
-body {
-    margin: 0;
-    padding: 0;
-    padding-top: 80px; /* Ajoute un padding égal à la hauteur du header */
-}
+  /* Ajout d'un padding-top pour compenser la hauteur du header */
+  body {
+    padding-top: 80px;
+  }
+  
+  /* === Bouton principal (button-primary) === */
+  .button-primary {
+    background-color: white;
+    color: #5c3d8d;
+    border: 2px solid #5c3d8d;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(92, 61, 141, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .button-primary:hover {
+    background-color: #5c3d8d;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(92, 61, 141, 0.2);
+  }
+  
+  .button-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(92, 61, 141, 0.3);
+  }
+  

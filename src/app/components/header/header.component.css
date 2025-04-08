@@ -41,29 +41,6 @@
   display: inline-block;
 }
 
-/* Style du bouton par défaut */
-.navbar button:not(.burger-menu) {
-  background-color: transparent;
-  color: black;
-  border: 2px solid #5c3d8d;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* Style du bouton au survol */
-.navbar button:not(.burger-menu):hover {
-  background-color: #4F3DB9;
-  color: white;
-}
-
-.navbar button:not(.burger-menu):focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(92, 61, 141, 0.6);
-}
 
 /* Burger Menu */
 .burger-menu {

@@ -2,11 +2,12 @@ import { Component, HostListener } from '@angular/core';
 import { ScrollService } from '../../services/scroll.service';
 import { CommonModule } from '@angular/common';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { BtnPDirective } from '../../shared/directives/btn-p.directive';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BtnPDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   animations: [
@@ -53,7 +54,7 @@ export class HeaderComponent {
   }
 
   toggleMenu(event: Event): void {
-    event.stopPropagation(); // Empêche la propagation du clic
+    event.stopPropagation();
     this.isMenuOpen = !this.isMenuOpen;
   }
 }
