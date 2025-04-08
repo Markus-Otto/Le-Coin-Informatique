@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Importation du module commun pour les directives Angular
-import { ScrollService } from '../../services/scroll.service'; // Importation du service de défilement
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CommonModule], 
+  imports: [CommonModule],
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css']
 })
@@ -14,27 +13,27 @@ export class ServicesComponent {
     {
       title: 'Vente de matériel',
       description: 'enim enim id voluptatum reiciendis et repudiandae exercitation',
-      icon: 'bi bi-laptop'  // Utilisation d'une icône Bootstrap
+      icon: 'bi bi-laptop'
     },
     {
       title: 'Réparation/dépannage',
       description: 'enim enim id voluptatum reiciendis et repudiandae exercitation',
-      icon: 'bi bi-tools'  // Utilisation d'une icône Bootstrap
+      icon: 'bi bi-tools'
     },
     {
       title: 'Assemblage sur mesure',
       description: 'enim enim id voluptatum reiciendis et repudiandae exercitation',
-      icon: 'bi bi-cpu'  // Utilisation d'une icône Bootstrap
+      icon: 'bi bi-cpu'
     },
     {
       title: 'Mise à niveau',
       description: 'enim enim id voluptatum reiciendis et repudiandae exercitation',
-      icon: 'bi bi-arrow-up-circle'  // Utilisation d'une icône Bootstrap
+      icon: 'bi bi-arrow-up-circle'
     },
     {
       title: 'Conseil technique',
       description: 'enim enim id voluptatum reiciendis et repudiandae exercitation',
-      icon: 'bi bi-gear'  // Utilisation d'une icône Bootstrap
+      icon: 'bi bi-gear'
     }
   ];
 
@@ -43,5 +42,4 @@ export class ServicesComponent {
   toggleTarif() {
     this.showTarif = !this.showTarif;
   }
-
 }
