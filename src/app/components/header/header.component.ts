@@ -10,24 +10,6 @@ import { BtnPDirective } from '../../shared/directives/btn-p.directive';
   imports: [CommonModule, BtnPDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
-  animations: [
-    trigger('slideInOut', [
-      state('void', style({
-        transform: 'translateY(-100%)',
-        opacity: 0
-      })),
-      state('*', style({
-        transform: 'translateY(0)',
-        opacity: 1
-      })),
-      transition('void => *', [
-        animate('300ms ease-out')
-      ]),
-      transition('* => void', [
-        animate('200ms ease-in')
-      ])
-    ])
-  ]
 })
 export class HeaderComponent {
   isMenuOpen = false;
