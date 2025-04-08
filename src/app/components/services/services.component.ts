@@ -37,4 +37,11 @@ export class ServicesComponent {
       icon: 'bi bi-gear'  // Utilisation d'une icône Bootstrap
     }
   ];
+
+  showTarif: boolean = false;
+
+  toggleTarif() {
+    this.showTarif = !this.showTarif;
+  }
+
 }

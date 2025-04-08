@@ -7,9 +7,11 @@
   </footer>
   
 <!-- Modal -->
-<div class="modal" [ngClass]="{'is-active': isModalOpen}">
-  <div class="modal-background" (click)="closeModal()"></div>
-  <div class="modal-content">
+<div class="modal" [ngClass]="{'is-active': isModalOpen}" (click)="closeModal()">
+  <div class="modal-background"></div>
+
+  <!-- Empêche la fermeture quand on clique dans le contenu -->
+  <div class="modal-content" (click)="$event.stopPropagation()">
     <div class="box">
       <h2>Mentions Légales</h2>
       
@@ -25,7 +27,6 @@
       <p><strong>Hébergeur du site :</strong> OVH, 2 rue Kellermann, 59100 Roubaix, France</p>
       <p><strong>Gestion de l'hébergement :</strong> DIVILIS (Tom Manlay) – Gère l'hébergement, la maintenance, et les mises à jour du site.</p>
 
-      
       <h3>3. Création et développement du site</h3>
       <p><strong>Entreprise responsable de la création :</strong> DIVILIS</p>
       <p><strong>Site internet :</strong> https://divilis.fr </p>

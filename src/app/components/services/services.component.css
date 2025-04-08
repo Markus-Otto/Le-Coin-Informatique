@@ -229,3 +229,42 @@
   font-weight: bold;
   margin-left: 20px;
 }
+
+.tarif-info-mobile {
+  display: none;
+}
+
+@media (max-width: 999px) {
+  .tarif-info-mobile {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tarif-info-mobile ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .tarif-info-mobile li {
+    font-size: 1rem;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tarif-info-mobile .price {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+
+  .tarif-info {
+    display: none;
+  }
+}
