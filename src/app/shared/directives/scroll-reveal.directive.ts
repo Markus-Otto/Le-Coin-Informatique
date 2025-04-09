@@ -1,4 +1,6 @@
 import { Directive, ElementRef, Renderer2, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID } from '@angular/core';
 
 @Directive({
   selector: '[appScrollReveal]',
@@ -6,22 +8,31 @@ import { Directive, ElementRef, Renderer2, OnInit } from '@angular/core';
 })
 export class ScrollRevealDirective implements OnInit {
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
+  
 
   ngOnInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+  
+    const native = this.el.nativeElement;
+  
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          console.log('Section visible !');
-          this.renderer.addClass(this.el.nativeElement, 'revealed');
-          this.renderer.setStyle(this.el.nativeElement, 'transition', 'opacity 1s ease, transform 1s ease');
-          observer.unobserve(this.el.nativeElement);
+          this.renderer.setStyle(native, 'opacity', '1');
+          this.renderer.setStyle(native, 'transform', 'none');
+          observer.unobserve(native);
         }
       });
     }, {
       threshold: 0.1
     });
-
-    observer.observe(this.el.nativeElement);
+  
+    observer.observe(native);
   }
+  
 }
