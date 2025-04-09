@@ -42,6 +42,14 @@
   display: inline-block;
 }
 
+.navbar button:not(.burger-menu) {
+  transition: all 0.3s ease;
+}
+
+.navbar button.active:not(.burger-menu) {
+  background-color: #5c3d8d;
+  color: white;
+}
 
 /* Burger Menu */
 .burger-menu {
@@ -86,58 +94,39 @@
 /* Media Queries pour le responsive */
 @media screen and (max-width: 768px) {
   .navbar {
-      padding: 5px 20px;
+    padding: 5px 20px;
   }
 
   .burger-menu {
-      display: flex;
+    display: flex;
   }
 
   .navbar ul {
-      display: none;
-      position: absolute;
-      top: 80px;
-      left: 0;
-      right: 0;
-      background-color: #E8DBC8;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px 0;
-      gap: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #E8DBC8;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
   .navbar ul.active {
-      display: flex;
+    display: flex;
   }
 
   .navbar li {
-      width: 100%;
-      text-align: center;
-      opacity: 0;
-      animation: fadeIn 0.5s ease forwards;
+    width: 100%;
+    text-align: center;
   }
-
-  .navbar li:nth-child(1) { animation-delay: 0.1s; }
-  .navbar li:nth-child(2) { animation-delay: 0.2s; }
-  .navbar li:nth-child(3) { animation-delay: 0.3s; }
-  .navbar li:nth-child(4) { animation-delay: 0.4s; }
-  .navbar li:nth-child(5) { animation-delay: 0.5s; }
 
   .navbar button:not(.burger-menu) {
-      width: 80%;
-      margin: 5px 0;
-  }
-
-  @keyframes fadeIn {
-      from {
-          opacity: 0;
-          transform: translateY(-10px);
-      }
-      to {
-          opacity: 1;
-          transform: translateY(0);
-      }
+    width: 80%;
+    margin: 5px 0;
   }
 }
 
@@ -154,4 +143,9 @@
 .burger-menu.active span:nth-child(3) {
   bottom: 50%;
   transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+li.active {
+  font-weight: bold;
+  color: var(--accent-color); 
 }

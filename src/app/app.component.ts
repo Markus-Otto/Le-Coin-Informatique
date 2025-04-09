@@ -27,10 +27,5 @@ import { AProposComponent } from "./components/a-propos/a-propos.component";
 export class AppComponent {
   title = 'Le-Coin-Informatique';
 
-  scrollToComponent(sectionId: string): void {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+  constructor(private scrollService: ScrollService) {}
 }

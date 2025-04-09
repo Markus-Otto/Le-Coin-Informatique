@@ -1,6 +1,6 @@
 .services-container {
   text-align: center;
-  padding: 20px 20px;
+  padding: 1.25rem;
   background-color: #E8DBC8;
 }
 
@@ -8,187 +8,178 @@
   margin-top: 2.5%;
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 
 .card {
   background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  width: 200px;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
+  width: 12.5rem;
   text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-0.625rem);
   background-color: #e0d4f7;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #5c3d8d;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .card p {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #666;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .UL {
   position: relative;
   color: #2d2d2d;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .UL::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: -0.3125rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 230px;
-  height: 4px;
+  width: 14.375rem;
+  height: 0.25rem;
   background: linear-gradient(90deg, #5c3d8d, #7a66ff);
   margin-top: 0.5rem;
-  border-radius: 2px;
+  border-radius: 0.125rem;
 }
 
 .atelier-tarif {
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
 .atelier-container {
   position: relative;
   margin: 0 auto;
   width: 96.25%;
-  height: 400px;
+  height: 25rem;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 0.625rem;
 }
 
 .atelier-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   filter: brightness(0.7);
+  will-change: filter;
 }
 
 .infotarif {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 1.25rem;
+  left: 1.25rem;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 0.625rem;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .infotarif h2 {
   color: white;
   font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.7);
   margin: 0;
   pointer-events: none;
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .arrow {
-  rotate: 180deg;
-  width: 20px;
-  height: 20px;
-  border-right: 3px solid white;
-  border-top: 3px solid white;
-  transform: rotate(135deg);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-right: 0.1875rem solid white;
+  border-top: 0.1875rem solid white;
+  transform: rotate(315deg);
   animation: arrow-bounce 1s infinite;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 1;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes arrow-bounce {
   0%, 100% {
-    transform: translateY(0) rotate(135deg);
+    transform: translateY(0) rotate(315deg);
   }
   50% {
-    transform: translateY(-10px) rotate(135deg);
+    transform: translateY(-0.625rem) rotate(315deg);
   }
 }
 
 .atelier-container:hover .infotarif {
-  transform: translateY(-20px);
+  transform: translateY(-1.25rem);
 }
 
 .atelier-container:hover .arrow {
-  transform: translateY(0) rotate(135deg);
+  transform: translateY(0) rotate(315deg);
   animation: none;
   opacity: 0;
 }
 
 .atelier-container:hover .infotarif h2 {
-  transform: translateY(20px);
+  transform: translateY(1.25rem);
   opacity: 0.7;
 }
 
 .tarif-info {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  transform: translateY(20px);
+  transform: translateY(1.25rem);
 }
 
 .tarif-info ul {
   width: 40%;
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin-right: 5%;
 }
 
 .tarif-info li {
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  font-weight: 700;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.7);
   font-size: 1.39rem;
-  margin: 10px 0;
+  margin: 0.625rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   opacity: 0;
-  transform: translateX(20px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(1.25rem);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .price {
-  font-weight: bold;
-  margin-left: 20px;
+  font-weight: 700;
+  margin-left: 1.25rem;
 }
 
-/* Styles pour PC */
-@media (min-width: 1000px) {
+@media (min-width: 62.5rem) {
   .atelier-container:hover .atelier-image {
     filter: brightness(0.5);
   }
@@ -204,23 +195,58 @@
     transform: translateX(0);
   }
 
-  .tarif-info li:nth-child(1) { transition-delay: 0.1s; }
-  .tarif-info li:nth-child(2) { transition-delay: 0.2s; }
-  .tarif-info li:nth-child(3) { transition-delay: 0.3s; }
-  .tarif-info li:nth-child(4) { transition-delay: 0.4s; }
-  .tarif-info li:nth-child(5) { transition-delay: 0.5s; }
-  .tarif-info li:nth-child(6) { transition-delay: 0.6s; }
-  .tarif-info li:nth-child(7) { transition-delay: 0.7s; }
-  .tarif-info li:nth-child(8) { transition-delay: 0.8s; }
+  .tarif-info li {
+    transition-delay: calc(0.1s * var(--index));
+  }
 }
 
-/* Styles pour Mobile */
-@media (max-width: 999px) {
+@media (min-width: 29.125rem) and (max-width: 62.4375rem) {
   .tarif-info {
     justify-content: center;
   }
 
   .tarif-info.show {
+    margin-top: -5.3125rem;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .tarif-info.show li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .tarif-info ul {
+    width: 90%;
+    margin: 0;
+  }
+
+  .tarif-info li {
+    font-size: 1.1rem;
+  }
+
+  .atelier-container.active .atelier-image {
+    filter: brightness(0.5);
+  }
+
+  .atelier-container.active .infotarif {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 29.0625rem) {
+  .atelier-container {
+    margin-top: 12.5rem;
+    height: 43.75rem;
+  }
+
+  .tarif-info {
+    justify-content: center;
+  }
+
+  .tarif-info.show {
+    margin-top: -5.3125rem;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);

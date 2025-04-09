@@ -11,10 +11,34 @@
         </button>
 
         <ul [class.active]="isMenuOpen" [@slideInOut]="isMenuOpen ? '*' : 'void'">
-            <li><button btnP (click)="scrollToSection('section1')">Accueil</button></li>
-            <li><button btnP (click)="scrollToSection('section2')">Services</button></li>
-            <li><button btnP (click)="scrollToSection('section3')">À propos</button></li>
-            <li><button btnP (click)="scrollToSection('section4')">Contact</button></li>
+            <li>
+                <button btnP 
+                    [class.active]="activeButton === 'section1'" 
+                    (click)="scrollToSection('section1')">
+                    Accueil
+                </button>
+            </li>
+            <li>
+                <button btnP 
+                    [class.active]="activeButton === 'section2'" 
+                    (click)="scrollToSection('section2')">
+                    Services
+                </button>
+            </li>
+            <li>
+                <button btnP 
+                    [class.active]="activeButton === 'section3'" 
+                    (click)="scrollToSection('section3')">
+                    À propos
+                </button>
+            </li>
+            <li>
+                <button btnP 
+                    [class.active]="activeButton === 'section4'" 
+                    (click)="scrollToSection('section4')">
+                    Contact
+                </button>
+            </li>
         </ul>
     </div>
 </div>
