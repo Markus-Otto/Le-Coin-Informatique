@@ -2,7 +2,7 @@ import { Directive, ElementRef, Renderer2, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appScrollReveal]',
-  standalone: true // 👈 ceci est crucial
+  standalone: true
 })
 export class ScrollRevealDirective implements OnInit {
 
@@ -14,6 +14,7 @@ export class ScrollRevealDirective implements OnInit {
         if (entry.isIntersecting) {
           console.log('Section visible !');
           this.renderer.addClass(this.el.nativeElement, 'revealed');
+          this.renderer.setStyle(this.el.nativeElement, 'transition', 'opacity 1s ease, transform 1s ease');
           observer.unobserve(this.el.nativeElement);
         }
       });
