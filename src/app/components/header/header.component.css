@@ -47,7 +47,7 @@
 }
 
 .navbar button.active:not(.burger-menu) {
-  background-color: #5c3d8d;
+  background-color: #000000;
   color: white;
 }
 

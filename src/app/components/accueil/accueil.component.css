@@ -24,9 +24,10 @@
   
   /* Titre du hero */
   .accueil-container h1 {
+    color: rgb(255, 255, 255);
     font-size: 48px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre légère au texte */
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Ombre légère au texte */
     margin-bottom: 20px; /* Espace sous le titre */
     text-align: center; /* S'assurer que le texte est bien centré */
   }
