@@ -8,6 +8,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { AProposComponent } from "./components/a-propos/a-propos.component";
 import { ScrollRevealDirective } from '../app/shared/directives/scroll-reveal.directive';
 import { ContactComponent } from "./components/contact/contact.component";
+import { PopupAsusComponent } from './components/popup-asus/popup-asus.component';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,8 @@ import { ContactComponent } from "./components/contact/contact.component";
     ServicesComponent,
     AProposComponent,
     ScrollRevealDirective,
-    ContactComponent
+    ContactComponent,
+    PopupAsusComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -1,0 +1,12 @@
+<div
+  class="popup-asus"
+  (click)="togglePopup()"
+  [class.compact]="isCompact"
+>
+  <ng-container *ngIf="!isCompact; else iconOnly">
+    📦 Point relais / Revendeur ASUS
+  </ng-container>
+  <ng-template #iconOnly>
+    <i class="bi bi-box-seam-fill"></i>
+  </ng-template>
+</div>

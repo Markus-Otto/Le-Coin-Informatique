@@ -1,0 +1,40 @@
+.popup-asus {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 1.25rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition:
+      padding 0.3s ease,
+      font-size 0.3s ease,
+      width 0.3s ease,
+      transform 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  /* Compacte (icône seule) */
+  .popup-asus.compact {
+    padding: 0.6rem 0.7rem;
+    font-size: 1.25rem;
+    justify-content: center;
+  }
+  
+  /* Responsive : centré en bas sur mobile */
+  @media (max-width: 600px) {
+    .popup-asus {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 15px;
+    }
+  }
+  
