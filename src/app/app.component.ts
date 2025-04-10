@@ -7,6 +7,7 @@ import { ScrollService } from './services/scroll.service';
 import { ServicesComponent } from './components/services/services.component';
 import { AProposComponent } from "./components/a-propos/a-propos.component";
 import { ScrollRevealDirective } from '../app/shared/directives/scroll-reveal.directive';
+import { ContactComponent } from "./components/contact/contact.component";
 
 @Component({
   selector: 'app-root',
@@ -21,8 +22,9 @@ import { ScrollRevealDirective } from '../app/shared/directives/scroll-reveal.di
     AccueilComponent,
     ServicesComponent,
     AProposComponent,
-    ScrollRevealDirective
-  ],
+    ScrollRevealDirective,
+    ContactComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
