@@ -95,7 +95,37 @@
   border-bottom: none;
 }
 
+.contact-main-title {
+  grid-column: 1 / -1; /* prend toute la largeur de la grille */
+  position: relative; /* Ensure the pseudo-element is positioned relative to the title */
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+}
 
+
+.contact-main-title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 180px;
+  height: 4px;
+  background: linear-gradient(90deg, #5c3d8d, #7a66ff);
+  margin-top: 0.5rem;
+  border-radius: 2px;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for the element's width */
+}
+
+@media (max-width: 768px) {
+  .contact-main-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+}
 
 
 

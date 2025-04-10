@@ -18,7 +18,7 @@
       font-size 0.3s ease,
       width 0.3s ease,
       transform 0.3s ease;
-    cursor: pointer;
+    cursor:auto;
     white-space: nowrap;
   }
   
@@ -35,6 +35,7 @@
       left: 50%;
       transform: translateX(-50%);
       bottom: 15px;
+      cursor: pointer;
     }
   }
   
