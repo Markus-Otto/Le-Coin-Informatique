@@ -6,6 +6,7 @@
   padding: 2rem;
   background-color: #e4d7c3;
   font-family: 'Poppins', sans-serif;
+  
 }
 
 .container-contact,
@@ -18,17 +19,35 @@
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+.container-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* centrer horizontalement */
+  justify-content: center;    /* centrer verticalement */
+  height: 100%;
+  text-align: center;         /* pour centrer les textes dans les lignes */
+  font-size: 3rem;         /* agrandir le texte */
+}
+.icon {
+  margin-right: 0.8rem;
+  font-size: 2rem; /* 🔥 plus grand */
+  color: #000000;
+}
+
+
 .container-contact .info-item {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
 }
+
 
 .icon {
   margin-right: 0.8rem;
   font-size: 1.4rem;
-  color: #6c63ff;
+  color: #000000;
 }
 
 .container-horaire table {
@@ -38,7 +57,7 @@
 }
 
 .container-horaire td {
-  border: 1px solid #bbaaff;
+  border: 1px solid #000000;
   padding: 0.5rem;
   text-align: center;
 }
