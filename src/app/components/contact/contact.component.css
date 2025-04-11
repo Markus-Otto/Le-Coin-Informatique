@@ -209,7 +209,9 @@
 }
 
 
-
+.horaire-box {
+  font-weight: bold;
+}
 
 
 @media (max-width: 768px) {
@@ -238,7 +240,7 @@
 
   .icon {
     font-size: 1.4rem;
-    margin-right: 0; /* pas besoin de marge si empilé */
+    margin-right: 0; 
   }
 
   .container-form input,
