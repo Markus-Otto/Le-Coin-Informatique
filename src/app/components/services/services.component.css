@@ -1,7 +1,8 @@
+/* Base Container Styles */
 .services-container {
   text-align: center;
   padding: 1.25rem;
-  background-color: #E8DBC8;
+  background-color: #F5F5F5;
 }
 
 .services-cards {
@@ -12,34 +13,59 @@
   flex-wrap: wrap;
 }
 
+/* Card Styles */
 .card {
   background-color: white;
-  border-radius: 0.625rem;
+  border-radius: 0.5rem;
   padding: 1.25rem;
   width: 12.5rem;
+  height: 15rem; /* Fixed height for all cards */
   text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to top */
 }
 
 .card:hover {
   transform: translateY(-0.625rem);
-  background-color: #f3f0fe; /*ancien a #e0d4f7*/
+  background-color: #f3f0fe;
   box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+  border-color: #007AFF;
+}
+
+.card i {
+  font-size: 2.5rem; /* Fixed icon size */
+  margin: 0.625rem 0 1.25rem 0;
+  display: block;
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 .card h3 {
   font-size: 1.125rem;
-  color: #000000;
-  margin-bottom: 0.625rem;
+  color: black;
+  margin: 0 0 0.500rem 0;
+  width: 100%;
+  flex-shrink: 0; /* Prevent title from shrinking */
 }
 
 .card p {
   font-size: 0.875rem;
-  color: #666;
-  margin-bottom: 0.625rem;
+  color: #666666;
+  margin: 0;
+  width: 100%;
+  line-height: 1.4;
+  flex-grow: 1; /* Allow description to take remaining space */
+  overflow: hidden; /* Hide overflow text */
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limit to 4 lines */
+  -webkit-box-orient: vertical;
 }
 
+/* Rest of the CSS remains unchanged */
 .UL {
   position: relative;
   color: #2d2d2d;
@@ -54,11 +80,12 @@
   transform: translateX(-50%);
   width: 14.375rem;
   height: 0.25rem;
-  background: linear-gradient(90deg, #5c3d8d, #7a66ff);
   margin-top: 0.5rem;
   border-radius: 0.125rem;
+  background: linear-gradient(90deg, #5c3d8d, #7a66ff);
 }
 
+/* Workshop and Pricing Styles */
 .atelier-tarif {
   margin-top: 3.125rem;
 }
@@ -70,15 +97,15 @@
   height: 25rem;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 0.625rem;
+  border-radius: 0.5rem;
 }
 
 .atelier-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   filter: brightness(0.7);
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: filter;
 }
 
@@ -91,26 +118,27 @@
   flex-direction: column;
   align-items: center;
   gap: 0.625rem;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .infotarif h2 {
   color: white;
   font-size: 3rem;
-  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.7);
   margin: 0;
   pointer-events: none;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Arrow Animation */
 .arrow {
   width: 1.25rem;
   height: 1.25rem;
   border-right: 0.1875rem solid white;
   border-top: 0.1875rem solid white;
   transform: rotate(315deg);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   animation: arrow-bounce 1s infinite;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes arrow-bounce {
@@ -122,14 +150,15 @@
   }
 }
 
+/* Hover Effects */
 .atelier-container:hover .infotarif {
   transform: translateY(-1.25rem);
 }
 
 .atelier-container:hover .arrow {
   transform: translateY(0) rotate(315deg);
-  animation: none;
   opacity: 0;
+  animation: none;
 }
 
 .atelier-container:hover .infotarif h2 {
@@ -137,6 +166,7 @@
   opacity: 0.7;
 }
 
+/* Pricing Info Panel */
 .tarif-info {
   position: absolute;
   inset: 0;
@@ -144,14 +174,14 @@
   color: white;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 1.25rem;
   text-align: center;
-  border-radius: 0.625rem;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   transform: translateY(1.25rem);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tarif-info ul {
@@ -163,7 +193,6 @@
 
 .tarif-info li {
   font-weight: 700;
-  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.7);
   font-size: 1.39rem;
   margin: 0.625rem 0;
   display: flex;
@@ -171,7 +200,8 @@
   align-items: center;
   opacity: 0;
   transform: translateX(1.25rem);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
 }
 
 .price {
@@ -179,6 +209,7 @@
   margin-left: 1.25rem;
 }
 
+/* Responsive Styles */
 @media (min-width: 62.5rem) {
   .atelier-container:hover .atelier-image {
     filter: brightness(0.5);

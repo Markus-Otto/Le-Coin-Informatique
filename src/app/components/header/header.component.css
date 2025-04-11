@@ -1,6 +1,9 @@
 /* Navbar */
 .navbar {
-  background-color: #E8DBC8;
+  background-color: #ffffff; /*#E8DBC8*/
+  border-bottom-width: 3px; /* a retirer pour version précedente */
+  border-bottom-style: solid; /* a retirer pour version précedente */
+  border-color: #007AFF; /* a retirer pour version précedente */
   padding: 5px 50px;
   display: flex;
   justify-content: space-between;
