@@ -19,7 +19,7 @@ export class AccueilComponent {
   ) {
     this.seo.updateMeta(
       'Accueil - Picknoma',
-      'Bienvenue sur Picknoma, votre partenaire informatique pour la création de sites, dépannage et plus.'
+      'Bienvenue sur Le Coin Inform@tique, votre partenaire informatique pour la création de sites, dépannage et plus.'
     );
   }
 
