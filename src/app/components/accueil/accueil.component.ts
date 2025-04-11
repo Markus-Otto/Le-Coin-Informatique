@@ -1,21 +1,29 @@
 import { Component } from '@angular/core';
-import { ScrollService } from '../../services/scroll.service'; // Importation du service de défilement
-import { CommonModule } from '@angular/common'; // Importation du module commun pour les directives Angular
-import { BtnPDirective } from '../../shared/directives/btn-p.directive'; // Importation de la directive personnalisée
+import { CommonModule } from '@angular/common';
+import { BtnPDirective } from '../../shared/directives/btn-p.directive';
+import { ScrollService } from '../../services/scroll.service';
+import { SeoService } from '../../services/seo-service.service'; 
 
 @Component({
   selector: 'app-accueil',
   standalone: true,
-  imports: [BtnPDirective, CommonModule], // Ajout de la directive personnalisée et du module commun
+  imports: [CommonModule, BtnPDirective],
   templateUrl: './accueil.component.html',
-  styleUrl: './accueil.component.css'
+  styleUrls: ['./accueil.component.css']
 })
 export class AccueilComponent {
-  // Injection du service dans le constructeur
-  constructor(private scrollService: ScrollService) {}
 
-  // Méthode appelée lors du clic sur un bouton de défilement
+  constructor(
+    private scrollService: ScrollService,
+    private seo: SeoService
+  ) {
+    this.seo.updateMeta(
+      'Accueil - Picknoma',
+      'Bienvenue sur Picknoma, votre partenaire informatique pour la création de sites, dépannage et plus.'
+    );
+  }
+
   scrollToSection(sectionId: string): void {
-    this.scrollService.scrollToComponent(sectionId);  // Appelle la méthode du service
+    this.scrollService.scrollToComponent(sectionId);
   }
 }
