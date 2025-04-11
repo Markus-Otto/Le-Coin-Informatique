@@ -51,18 +51,19 @@
   
     <!-- Formulaire de contact -->
     <div class="container-form">
-      <form>
+      <form (submit)="onSubmit($event)">
         <label>Nom</label>
-        <input type="text" placeholder="Votre nom">
-  
+        <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Votre nom" required>
+    
         <label>Email</label>
-        <input type="email" placeholder="Votre email">
-  
+        <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Votre email" required>
+    
         <label>Message</label>
-        <textarea placeholder="Votre message"></textarea>
-  
+        <textarea name="message" [(ngModel)]="formData.message" placeholder="Votre message" required></textarea>
+    
         <button btnP type="submit">Envoyer</button>
       </form>
     </div>
+    
   </div>
   
