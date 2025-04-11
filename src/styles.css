@@ -18,8 +18,8 @@ body, html {
   /* === Bouton principal (button-primary) === */
   .button-primary {
     background-color: white;
-    color: #000000;
-    border: 2px solid #000000;
+    color: #007AFF; /* #007AFF */
+    border: 2px solid #007AFF; /* #007AFF */
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
     font-weight: 600;
@@ -30,15 +30,15 @@ body, html {
   }
   
   .button-primary:hover {
-    background-color: #000000;
+    background-color: #007AFF;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px #007AFF; /* #007AFF */
   }
   
   .button-primary:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 3px #007AFF; /* #007AFF */
   }
   
 
