@@ -1,6 +1,6 @@
 /* Navbar */
 .navbar {
-  background-color: #E8DBC8;
+  background-color: #DCD1C3 ; /* #E8DBC8; */
   padding: 5px 50px;
   display: flex;
   justify-content: space-between;

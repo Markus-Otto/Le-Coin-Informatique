@@ -21,6 +21,11 @@
     align-items: center; /* Centrer le contenu horizontalement */
     padding: 20px; /* Ajout de padding pour le contenu */
   }
+
+  .button-primary {
+    font-size: larger;
+    color:  #ffffff;
+  }
   
   /* Titre du hero */
   .accueil-container h1 {

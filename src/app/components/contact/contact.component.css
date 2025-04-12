@@ -113,7 +113,7 @@
   display: block;
   width: 180px;
   height: 4px;
-  background: linear-gradient(90deg, #5c3d8d, #7a66ff);
+  background: linear-gradient(to right, #007AFF, #7F5AFF);
   margin-top: 0.5rem;
   border-radius: 2px;
   left: 50%; /* Center horizontally */
