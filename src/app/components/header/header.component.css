@@ -46,10 +46,6 @@
   transition: all 0.3s ease;
 }
 
-.navbar button.active:not(.burger-menu) {
-  background-color: #000000;
-  color: white;
-}
 
 /* Burger Menu */
 .burger-menu {
