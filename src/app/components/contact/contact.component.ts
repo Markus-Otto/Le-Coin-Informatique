@@ -21,14 +21,33 @@ export class ContactComponent {
 
   constructor(private mailService: MailService) {} 
 
-  onSubmit(event: Event) {
-    event.preventDefault();
-    this.mailService.sendMail(this.formData).subscribe({
-      next: () => alert('Message envoyé avec succès !'),
-      error: (err) => {
-        alert('Une erreur est survenue.');
-        console.error(err);
-      }
-    });
-  }
+  toastMessage = '';
+toastType = ''; // 'success' | 'error'
+
+onSubmit(form: any) {
+  if (form.invalid) return;
+
+  this.mailService.sendMail(this.formData).subscribe({
+    next: () => {
+      this.showToast('Message envoyé avec succès !', 'success');
+      form.resetForm();
+    },
+    error: (err) => {
+      this.showToast('Une erreur est survenue. Réessayez plus tard.', 'error');
+      console.error(err);
+    }
+  });
+}
+
+showToast(message: string, type: 'success' | 'error') {
+  this.toastMessage = message;
+  this.toastType = type;
+
+  setTimeout(() => {
+    this.toastMessage = '';
+    this.toastType = '';
+  }, 3000); // cache après 3 secondes
+}
+
+  
 }
