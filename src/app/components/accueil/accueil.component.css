@@ -23,8 +23,11 @@
   }
 
   .button-primary {
-    font-size: larger;
-    color:  #ffffff;
+    background-color: rgba(239, 233, 233, 0.4); /* Couleur de fond semi-transparente */
+    color: #ffffff;
+ 
+    backdrop-filter: blur(5px); /* Effet de flou sur l'arrière-plan */
+    -webkit-backdrop-filter: blur(5px); /* Compatibilité avec les navigateurs Webkit */
   }
   
   /* Titre du hero */

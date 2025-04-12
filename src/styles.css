@@ -55,7 +55,7 @@ body, html {
 
 .button-primary:focus {
   outline: none;
-  box-shadow: 0 0 0 3px #007bff74;
+  box-shadow: 0 0 0 3px #007bff9d;
 }
   
 
