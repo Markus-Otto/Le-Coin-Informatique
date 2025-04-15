@@ -26,7 +26,7 @@
     <!-- Carte -->
     <div class="container-geo">
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d164.1974320747232!2d3.0596117!3d48.8170293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e8b0c5dcbcdcdd%3A0xce5e48288b3f610b!2sLe%20Coin%20Informatique!5e0!3m2!1sfr!2sfr!4v1744702366385!5m2!1sfr!2sfr" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        
+
       </iframe>
 
       
@@ -51,51 +51,51 @@
     </div>
     
   
-<!-- Formulaire de contact -->
-<div class="container-form">
-  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
-    <label>Nom</label>
-    <input
-      type="text"
-      name="name"
-      [(ngModel)]="formData.name"
-      placeholder="Votre nom"
-      required
-      #name="ngModel"
-    />
-    <div class="form-error" [class.visible]="name.invalid && name.touched">Le nom est requis.</div>
+    <!-- Formulaire de contact -->
+    <div class="container-form">
+      <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <label>Nom</label>
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="formData.name"
+          placeholder="Votre nom"
+          required
+          #name="ngModel"
+        />
+        <div class="form-error" [class.visible]="name.invalid && name.touched">Le nom est requis.</div>
 
-    <label>Email</label>
-    <input
-      type="email"
-      name="email"
-      [(ngModel)]="formData.email"
-      placeholder="Votre email"
-      required
-      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-      #email="ngModel"
-    />
-    <div class="form-error" [class.visible]="email.invalid && email.touched">
-      <span *ngIf="email.errors?.['required']">L'email est requis.</span>
-      <span *ngIf="email.errors?.['pattern']">Veuillez entrer un email valide.</span>
+        <label>Email</label>
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="formData.email"
+          placeholder="Votre email"
+          required
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          #email="ngModel"
+        />
+        <div class="form-error" [class.visible]="email.invalid && email.touched">
+          <span *ngIf="email.errors?.['required']">L'email est requis.</span>
+          <span *ngIf="email.errors?.['pattern']">Veuillez entrer un email valide.</span>
+        </div>
+
+        <label>Message</label>
+        <textarea
+          name="message"
+          [(ngModel)]="formData.message"
+          placeholder="Votre message"
+          required
+          #message="ngModel"
+        ></textarea>
+        <div class="form-error" [class.visible]="message.invalid && message.touched">Le message est requis.</div>
+
+        <button btnP type="submit" [disabled]="form.invalid">Envoyer</button>
+      </form>
+
+      <!-- Toast message -->
+      <div *ngIf="toastMessage" class="toast" [ngClass]="toastType">{{ toastMessage }}</div>
     </div>
-
-    <label>Message</label>
-    <textarea
-      name="message"
-      [(ngModel)]="formData.message"
-      placeholder="Votre message"
-      required
-      #message="ngModel"
-    ></textarea>
-    <div class="form-error" [class.visible]="message.invalid && message.touched">Le message est requis.</div>
-
-    <button btnP type="submit" [disabled]="form.invalid">Envoyer</button>
-  </form>
-
-  <!-- Toast message -->
-  <div *ngIf="toastMessage" class="toast" [ngClass]="toastType">{{ toastMessage }}</div>
-</div>
     
     
     
