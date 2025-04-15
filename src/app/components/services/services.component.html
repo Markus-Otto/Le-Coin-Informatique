@@ -9,15 +9,14 @@
   </div>
   
   <div class="atelier-tarif">
-    <div class="atelier-container" (click)="toggleTarif()">
+    <div class="atelier-container" [class.active]="showTarif" (click)="toggleTarif()">
       <img src="assets/images/image_atelier.jpg" alt="Atelier" class="atelier-image">
       
-      <div class="infotarif">
+      <div class="infotarif" [class.hidden]="showTarif">
         <div class="arrow"></div>
         <h2>Atelier et tarif</h2>
       </div>
   
-      <!-- Liste des tarifs (PC et Mobile) -->
       <div class="tarif-info" [class.show]="showTarif">
         <ul>
           <li>Forfait Check Annuel <span class="price">80€</span></li>

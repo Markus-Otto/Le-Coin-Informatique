@@ -124,18 +124,15 @@
 }
 
 .atelier-container:hover .infotarif {
+  left: 50%
+  right: 50%;
   transform: translateY(-1.25rem);
 }
 
-.atelier-container:hover .arrow {
-  transform: translateY(0) rotate(315deg);
-  animation: none;
-  opacity: 0;
-}
+
 
 .atelier-container:hover .infotarif h2 {
   transform: translateY(1.25rem);
-  opacity: 0.7;
 }
 
 .tarif-info {
@@ -189,6 +186,13 @@
 }
 
 @media (min-width: 62.5rem) {
+
+  .atelier-container:hover .arrow {
+    transform: translateY(0) rotate(315deg);
+    animation: none;
+    opacity: 0;
+  }
+
   .atelier-container:hover .atelier-image {
     filter: brightness(0.5);
   }
