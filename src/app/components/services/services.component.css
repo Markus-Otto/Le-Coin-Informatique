@@ -124,8 +124,6 @@
 }
 
 .atelier-container:hover .infotarif {
-  left: 50%
-  right: 50%;
   transform: translateY(-1.25rem);
 }
 
