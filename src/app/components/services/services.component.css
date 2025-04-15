@@ -68,7 +68,7 @@
   position: relative;
   margin: 0 auto;
   width: 96.25%;
-  height: 25rem;
+  height: 28rem;
   overflow: hidden;
   cursor: pointer;
   border-radius: 0.625rem;
@@ -209,7 +209,7 @@
   }
 }
 
-@media (min-width: 29.125rem) and (max-width: 62.4375rem) {
+@media (min-width: 29.0626rem) and (max-width: 62.5rem) {
   .tarif-info {
     justify-content: center;
   }
@@ -285,4 +285,8 @@
   }
 }
 
-
+@media (min-width:1000px) and (max-width:1235px) {
+  .atelier-container {
+    height: 35rem !important;
+  }
+}
