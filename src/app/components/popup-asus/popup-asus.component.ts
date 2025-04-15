@@ -13,13 +13,13 @@ export class PopupAsusComponent implements OnInit {
 
   ngOnInit(): void {
     // Auto compact sur mobile au chargement
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 900) {
       this.isCompact = true;
     }
   }
 
   togglePopup(): void {
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 99999) {
       this.isCompact = !this.isCompact;
     }
   }

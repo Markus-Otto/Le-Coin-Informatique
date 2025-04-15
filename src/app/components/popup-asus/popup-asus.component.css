@@ -1,4 +1,5 @@
 .popup-asus {
+    cursor: pointer;
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -18,7 +19,6 @@
       font-size 0.3s ease,
       width 0.3s ease,
       transform 0.3s ease;
-    cursor:auto;
     white-space: nowrap;
   }
   
