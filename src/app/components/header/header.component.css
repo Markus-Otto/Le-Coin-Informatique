@@ -1,6 +1,6 @@
 /* Navbar */
 .navbar {
-  background-color: #DCD1C3 ; /* #E8DBC8; */
+  background: linear-gradient(90deg, #424040, #223344); /* #E8DBC8, #DCD1C3, #2c3e50 */
   padding: 5px 50px;
   display: flex;
   justify-content: space-between;

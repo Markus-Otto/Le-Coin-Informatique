@@ -105,6 +105,48 @@
   }
 }
 
+/* === Bouton principal (button-primary) === */
+.button-primary {
+  background-color: transparent;
+  color: #ff0000; /* #007AFF pour le texte */
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1; 
+}
+
+.button-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #ff0000; 
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.button-primary:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.button-primary:hover::before {
+  left: 0;
+}
+
+.button-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ff00005e;
+}
+
 
 @media (max-width:999px) {
   .footer {

@@ -1,7 +1,7 @@
 .services-container {
   text-align: center;
   padding: 1.25rem;
-  background-color: #E8DBC8;
+  background: linear-gradient(90deg, #424040, #223344);
 }
 
 .services-cards {
@@ -29,6 +29,7 @@
   box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
 }
 
+
 .card h3 {
   font-size: 1.125rem;
   color: #000000;
@@ -43,7 +44,7 @@
 
 .UL {
   position: relative;
-  color: #2d2d2d;
+  color: #ffffff;
   margin-bottom: 1.25rem;
 }
 
