@@ -1,6 +1,6 @@
 /* Navbar */
 .navbar {
-  background: linear-gradient(90deg, #424040, #223344); /* #E8DBC8, #DCD1C3, #2c3e50 */
+  background: linear-gradient(90deg, #424040, #223344);
   padding: 5px 50px;
   display: flex;
   justify-content: space-between;
@@ -47,7 +47,6 @@
   transition: all 0.3s ease;
 }
 
-
 /* Burger Menu */
 .burger-menu {
   display: none;
@@ -68,7 +67,7 @@
   display: block;
   width: 30px;
   height: 3px;
-  background-color: #ffffff; /*avant #5c3d8d*/
+  background-color: #ffffff;
   transition: all 0.3s ease;
   position: absolute;
   left: 50%;
@@ -99,9 +98,9 @@
   }
 
   .navbar ul {
-    display: none;
-    position: absolute;
-    top: 80px;
+    display: block;
+    position: fixed;
+    top: -100%;
     left: 0;
     right: 0;
     background: linear-gradient(90deg, #424040, #223344);
@@ -110,15 +109,33 @@
     padding: 20px 0;
     gap: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Animation du menu */
+    transform: translateY(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
   }
 
   .navbar ul.active {
-    display: flex;
+    top: 80px;
+    opacity: 1;
+    visibility: visible;
   }
 
   .navbar li {
     width: 100%;
     text-align: center;
+    /* Animation des items du menu */
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    transition-delay: calc(0.1s * var(--item-index));
+  }
+
+  .navbar ul.active li {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .navbar button:not(.burger-menu) {
@@ -144,5 +161,5 @@
 
 li.active {
   font-weight: bold;
-  color: var(--accent-color); 
+  color: var(--accent-color);
 }
