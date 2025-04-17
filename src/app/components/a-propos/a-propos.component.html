@@ -1,23 +1,24 @@
-<div class="AP" style="background: #f1efef;">
-<div class="container-propos" id="section3">
-    <div class="img-container">
-        <img src="assets/images/V1 deventure_boutique_leboncoin.png" alt="Notre atelier informatique" class="img-about" loading="lazy" />
-    </div>
-    <div class="content-propos">
-        <h1 class="title">À propos</h1>
-        <p class="description">
-            Boutique ouverte depuis 2018, nous avons pour but de vous aider à trouver le matériel informatique qui vous correspond le mieux. Que ce soit pour un PC gamer, un PC de bureau ou un PC portable, nous avons ce qu'il vous faut ! Nous sommes là pour vous conseiller et vous aider à faire le bon choix.
-        </p>
-        <!--<button
-            class="button-primary"
-            (click)="openModal()"
-            aria-label="En savoir plus à propos de nous">
-            En savoir plus
-        </button>-->
+<div class="AP appScrollReveal" style="background: #f1efef;">
+    <div class="container-propos" id="section3">
+        <div class="img-container">
+            <img src="assets/images/V1 deventure_boutique_leboncoin.png" alt="Notre atelier informatique" class="img-about" loading="lazy" />
+        </div>
+        <div class="content-propos">
+            <h1 class="title">À propos</h1>
+            <p class="description">
+                Boutique ouverte depuis 2018, nous avons pour but de vous aider à trouver le matériel informatique qui vous correspond le mieux. Que ce soit pour un PC gamer, un PC de bureau ou un PC portable, nous avons ce qu'il vous faut ! Nous sommes là pour vous conseiller et vous aider à faire le bon choix.
+            </p>
+            <button
+                class="button-primary"
+                (click)="openModal()"
+                aria-label="Voir la Foire aux Questions">
+                FAQ
+            </button>
+        </div>
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal FAQ -->
 <div 
     class="modal-backdrop" 
     *ngIf="isModalOpen" 
@@ -25,36 +26,37 @@
     role="dialog"
     aria-labelledby="modalTitle"
     aria-modal="true">
-    <div 
-        #modalContent
-        class="modal" 
-        [@modalAnimation]
-        tabindex="0"
-        (keydown)="onKeydown($event)">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle" class="title">À propos de nous</h2>
-                <button 
-                    class="close-button" 
-                    (click)="closeModal()"
-                    aria-label="Fermer la fenêtre">
-                    ×
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="img-container">
-                    <img src="assets/img/IMG-B.png" alt="Notre équipe au travail" class="img-about" loading="lazy" />
-                </div>
-                <div class="content-propos">
-                    <p class="description">
-                        Bienvenue sur notre site ! Nous sommes une équipe passionnée par la technologie et l'informatique. Notre objectif est de partager nos connaissances et notre expertise avec vous.
-                    </p>
-                    <p class="description">
-                        Nous croyons que l'informatique est un outil puissant qui peut transformer des vies et des entreprises. C'est pourquoi nous nous engageons à fournir des ressources utiles, des conseils pratiques et des informations à jour sur les dernières tendances technologiques.
-                    </p>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle" class="title">Foire Aux Questions</h2>
+            <button 
+                class="close-button" 
+                (click)="closeModal()"
+                aria-label="Fermer la FAQ">
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="faq-container">
+                <div class="faq-item" *ngFor="let item of faqItems; let i = index">
+                    <button 
+                        class="faq-question" 
+                        (click)="toggleFaq(i)"
+                        [class.active]="item.isOpen"
+                        [attr.aria-expanded]="item.isOpen"
+                        [attr.aria-controls]="'faq-answer-' + i">
+                        {{ item.question }}
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div 
+                        class="faq-answer" 
+                        [class.open]="item.isOpen"
+                        [id]="'faq-answer-' + i"
+                        role="region"
+                        [attr.aria-labelledby]="'faq-question-' + i">
+                        {{ item.answer }}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
