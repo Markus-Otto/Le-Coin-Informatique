@@ -281,6 +281,8 @@
   transition: transform 0.3s ease;
 }
 
+
+
 .faq-question.active .faq-icon {
   color: #ff0000;
   transform: rotate(0deg);
@@ -332,6 +334,10 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .btn-propos {
+    display: block;
+    margin: 0 auto;
+  }
   .container-propos {
     padding: 2rem 1rem;
     gap: 2rem;
