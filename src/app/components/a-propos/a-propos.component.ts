@@ -42,6 +42,11 @@ export class AProposComponent {
       question: 'Proposez-vous des facilités de paiement ?',
       answer: 'Oui, nous proposons plusieurs options de paiement, y compris le paiement en plusieurs fois. N\'hésitez pas à nous consulter pour connaître toutes les modalités disponibles.',
       isOpen: false
+    },
+    {
+      question: 'autre question',
+      answer: 'autre réponse',
+      isOpen: false
     }
   ];
 
