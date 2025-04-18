@@ -20,22 +20,17 @@ export class AProposComponent {
   faqItems: FaqItem[] = [
     {
       question: 'Quels types de PC proposez-vous ?',
-      answer: 'Nous proposons une large gamme de PC : PC Gamer haute performance, PC de bureau pour un usage professionnel, et PC portables adaptés à tous les besoins et budgets.',
+      answer: 'Nous proposons une large gamme de PC, PC Gamer haute performance personnaliser, PC de bureau pour un usage professionnel, et PC portables adaptés à tous les besoins et budgets.',
       isOpen: false
     },
     {
       question: 'Proposez-vous un service de réparation ?',
-      answer: 'Oui, nous offrons un service complet de réparation pour tous types d\'ordinateurs. Notre équipe de techniciens qualifiés peut diagnostiquer et réparer la plupart des problèmes matériels et logiciels.',
+      answer: 'Oui, nous offrons un service complet de réparation pour tous types d\'ordinateurs.',
       isOpen: false
     },
     {
       question: 'Quelle est la durée de garantie ?',
-      answer: 'Tous nos PC neufs sont garantis 2 ans pièces et main d\'œuvre. Nous proposons également des extensions de garantie pour une plus grande tranquillité d\'esprit.',
-      isOpen: false
-    },
-    {
-      question: 'Faites-vous du conseil personnalisé ?',
-      answer: 'Absolument ! Nous prenons le temps d\'écouter vos besoins et votre budget pour vous recommander la solution la plus adaptée. Notre expertise nous permet de vous guider vers le meilleur choix.',
+      answer: 'La plus part de nos PC portable neufs sont garantis 3 ans. Les autres garantis 2 ans.',
       isOpen: false
     },
     {
