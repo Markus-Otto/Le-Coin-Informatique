@@ -22,7 +22,7 @@ export class ContactComponent {
   constructor(private mailService: MailService) {} 
 
   toastMessage = '';
-toastType = ''; // 'success' | 'error'
+toastType = '';
 
 onSubmit(form: any) {
   if (form.invalid) return;
