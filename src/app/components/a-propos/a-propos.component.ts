@@ -25,12 +25,12 @@ export class AProposComponent {
     },
     {
       question: 'Proposez-vous un service de réparation ?',
-      answer: 'Oui, nous offrons un service complet de réparation pour tous types d\'ordinateurs.',
+      answer: 'Oui, nous offrons un service complet de diagnostique et réparation (si réalisable) pour tous types d\'ordinateurs.',
       isOpen: false
     },
     {
       question: 'Quelle est la durée de garantie ?',
-      answer: 'La plus part de nos PC portable neufs sont garantis 3 ans. Les autres garantis 2 ans.',
+      answer: 'La plus part de nos PC portable neufs sont garantis 3 ans. Les autres garantis 2 ans. Les reconditionnés sont garantis 6 mois.',
       isOpen: false
     },
     {
@@ -39,10 +39,10 @@ export class AProposComponent {
       isOpen: false
     },
     {
-      question: 'autre question',
-      answer: 'autre réponse',
+      question: 'Vendez-vous des accessoires ?',
+      answer: 'Oui, nous proposons aussi des accessoires pour PC, y compris des claviers, souris, casques et autres périphériques.',
       isOpen: false
-    }
+    },
   ];
 
   constructor(private elementRef: ElementRef) {}

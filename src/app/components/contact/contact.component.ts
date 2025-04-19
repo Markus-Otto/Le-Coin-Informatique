@@ -46,7 +46,7 @@ showToast(message: string, type: 'success' | 'error') {
   setTimeout(() => {
     this.toastMessage = '';
     this.toastType = '';
-  }, 3000); // cache après 3 secondes
+  },3000); // cache après 3 secondes
 }
 
   
