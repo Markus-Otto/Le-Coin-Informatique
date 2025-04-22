@@ -38,25 +38,25 @@
         <div class="modal-body">
             <div class="faq-container">
                 <div class="faq-item" *ngFor="let item of faqItems; let i = index">
-                    <button 
-                        class="faq-question" 
-                        (click)="toggleFaq(i)"
-                        [class.active]="item.isOpen"
-                        [attr.aria-expanded]="item.isOpen"
-                        [attr.aria-controls]="'faq-answer-' + i">
-                        {{ item.question }}
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div 
-                        class="faq-answer" 
-                        [class.open]="item.isOpen"
-                        [id]="'faq-answer-' + i"
-                        role="region"
-                        [attr.aria-labelledby]="'faq-question-' + i">
-                        {{ item.answer }}
-                    </div>
+                  <button
+                    class="faq-question"
+                    (click)="toggleFaq(i)"
+                    [class.active]="item.isOpen"
+                    [attr.aria-expanded]="item.isOpen"
+                    [attr.aria-controls]="'faq-answer-' + i">
+                    {{ item.question }}
+                    <span class="faq-icon">▼</span>
+                  </button>
+                  <div
+                    class="faq-answer"
+                    [class.open]="item.isOpen"
+                    [id]="'faq-answer-' + i"
+                    role="region"
+                    [attr.aria-labelledby]="'faq-question-' + i">
+                    {{ item.answer }}
+                  </div>
                 </div>
-            </div>
+            </div>                          
         </div>
     </div>
 </div>

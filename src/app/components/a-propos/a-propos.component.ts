@@ -81,11 +81,41 @@ export class AProposComponent {
   }
 
   toggleFaq(index: number): void {
-    this.faqItems = this.faqItems.map((item, i) => ({
-      ...item,
-      isOpen: i === index ? !item.isOpen : false
-    }));
+    this.faqItems = this.faqItems.map((item, i) => {
+      if (i === index) {
+        item.isOpen = !item.isOpen;
+        if (item.isOpen) {
+          this.animateHeight(index, true);
+        } else {
+          this.animateHeight(index, false);
+        }
+      } else {
+        item.isOpen = false;
+        this.animateHeight(i, false);
+      }
+      return item;
+    });
   }
+  
+  animateHeight(index: number, isOpen: boolean): void {
+    const answerElement = document.getElementById(`faq-answer-${index}`);
+  
+    if (answerElement) {
+      if (isOpen) {
+        // Initialisation de max-height à 0 pour l'animation
+        answerElement.style.transition = 'max-height 0.3s ease-out, padding 0.3s ease-out';
+        answerElement.style.maxHeight = '0'; // Initialisation de la hauteur à 0
+        setTimeout(() => {
+          // Applique une hauteur suffisamment grande pour couvrir le contenu
+          answerElement.style.maxHeight = `500px`;
+        }, 10);  // Petit délai pour permettre l'animation
+      } else {
+        // Lors de la fermeture, on réduit la hauteur à 0
+        answerElement.style.transition = 'max-height 0.3s ease-in, padding 0.3s ease-in';
+        answerElement.style.maxHeight = '0';  // Réduit la hauteur à 0
+      }
+    }
+  }  
 
   @HostListener('window:keydown.escape')
   handleEscapeKey(): void {
