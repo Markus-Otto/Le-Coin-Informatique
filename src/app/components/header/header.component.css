@@ -17,7 +17,8 @@
 .logo {
   background-color: white;
   border-radius: 15px;
-  width: 175px;
+  padding-right: 5px;
+  width: 150px;
   height: auto;
   margin-left: -2.5%;
 }

@@ -43,6 +43,21 @@ export class AProposComponent {
       answer: 'Oui, nous proposons aussi des accessoires pour PC, y compris des claviers, souris, casques et autres périphériques.',
       isOpen: false
     },
+    {
+      question: 'Offrez-vous un service après-vente ?',
+      answer: 'Oui, nous assurons un service après-vente complet : assistance technique, suivi des réparations et conseils d’entretien pour prolonger la durée de vie de votre matériel.',
+      isOpen: false
+    },
+    {
+      question: 'Puis-je faire reprendre ou revendre mon ancien PC ?',
+      answer: 'Non, nous ne proposons pas de reprise de matériel.',
+      isOpen: false
+    },
+    {
+      question: 'Puis-je obtenir un devis avant intervention ?',
+      answer: 'Oui, tous nos diagnostics sont accompagnés d’un devis gratuit avant toute réparation ou intervention. Vous êtes libre de l’accepter ou non.',
+      isOpen: false
+    },
   ];
 
   constructor(private elementRef: ElementRef) {}

@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // Import essentiel pour ngModel
+import { FormsModule } from '@angular/forms'; 
 import { ScrollService } from '../../services/scroll.service';
 import { BtnPDirective } from '../../shared/directives/btn-p.directive';
-import { MailService } from '../../services/mail.service'; // Assure-toi que le chemin est bon
+import { MailService } from '../../services/mail.service'; 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, BtnPDirective], // Ajout de FormsModule ici
+  imports: [CommonModule, FormsModule, BtnPDirective], 
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
@@ -46,7 +46,7 @@ showToast(message: string, type: 'success' | 'error') {
   setTimeout(() => {
     this.toastMessage = '';
     this.toastType = '';
-  },3000); // cache après 3 secondes
+  },3000); // 3 seconds 
 }
 
   

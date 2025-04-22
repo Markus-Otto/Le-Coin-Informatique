@@ -18,7 +18,7 @@ export class AccueilComponent {
     private seo: SeoService
   ) {
     this.seo.updateMeta(
-      'Accueil - Picknoma',
+      'Le Coin Inform@tique',
       'Bienvenue sur Le Coin Inform@tique, votre partenaire informatique pour la création de sites, dépannage et plus.'
     );
   }
