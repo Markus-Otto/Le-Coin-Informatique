@@ -15,18 +15,34 @@
 }
 
 .logo {
-  background-color: white;
-  border-radius: 15px;
   padding-right: 5px;
-  width: 150px;
+  width: 200px;
   height: auto;
   margin-left: -2.5%;
 }
 
+.textlogo {
+  padding: 5px;
+  background-color: #223344;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  justify-content: start;
+}
+
 .logo img {
+  border-radius: 15px;
   width: 100%;
   height: 100%;
   display: block;
+}
+
+button {
+  bottom: 8px;
 }
 
 .nav-container {
