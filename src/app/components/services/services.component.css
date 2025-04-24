@@ -23,10 +23,9 @@
 }
 
 .card:hover {
-  border: 1px solid #007bff;
   transform: translateY(-0.625rem);
-  background-color: #f3f0fe;
-  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+  background-color: #cdcdcd;
+  box-shadow: 0 0.62rgb(116, 101, 172)25rem rgba(0, 0, 0, 0.1);
 }
 
 
