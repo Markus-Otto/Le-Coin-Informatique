@@ -140,7 +140,7 @@
 
 .button-primary:hover::before {
   left: 0;
-}
+}&
 
 .button-primary:focus {
   outline: none;
