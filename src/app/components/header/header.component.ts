@@ -9,13 +9,6 @@ import {
 import { isPlatformBrowser } from '@angular/common';
 import { ScrollService } from '../../services/scroll.service';
 import { CommonModule } from '@angular/common';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
 import { BtnPDirective } from '../../shared/directives/btn-p.directive';
 
 @Component({
@@ -24,25 +17,7 @@ import { BtnPDirective } from '../../shared/directives/btn-p.directive';
   imports: [CommonModule, BtnPDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
-  animations: [
-    trigger('slideInOut', [
-      state(
-        'void',
-        style({
-          transform: 'translateY(-100%)',
-          opacity: 0,
-        })
-      ),
-      state(
-        '*',
-        style({
-          transform: 'translateY(0)',
-          opacity: 1,
-        })
-      ),
-      transition('void <=> *', [animate('300ms ease-in-out')]),
-    ]),
-  ],
+  
 })
 export class HeaderComponent implements AfterViewInit, OnDestroy {
   isMenuOpen = false;

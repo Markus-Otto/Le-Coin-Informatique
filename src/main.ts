@@ -4,5 +4,10 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { appConfig } from './app/app.config';
 import { provideHttpClient } from '@angular/common/http';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  ...appConfig,
+  providers: [
+    provideAnimations(),
+    provideHttpClient()
+  ]
+}).catch(err => console.error(err));
