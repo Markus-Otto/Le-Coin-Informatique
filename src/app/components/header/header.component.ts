@@ -55,7 +55,6 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
   ) {}
 
   ngAfterViewInit(): void {
-    // Exécute seulement dans le navigateur (pas SSR)
     if (isPlatformBrowser(this.platformId) && 'IntersectionObserver' in window) {
       const sectionIds = ['section1', 'section2', 'section3', 'section4'];
       const options = {
