@@ -12,27 +12,27 @@ export class ServicesComponent {
   services = [
     {
       title: 'Vente de matériel',
-      description: 'enim enim id voluptatum reiciendis et repudiandae exercitation',
+      description: 'Ordinateurs, composants et accessoires sélectionnés avec soin. Nous proposons du matériel fiable et performant, adapté à tous les besoins : bureautique, gaming ou professionnel.',
       icon: 'bi bi-laptop'
     },
     {
       title: 'Réparation/dépannage',
-      description: 'enim enim id voluptatum reiciendis et repudiandae exercitation',
+      description: 'Pannes logicielles ou matérielles. Nous intervenons sur les ordinateurs en cas de lenteurs, bugs, écran noir, composants défectueux ou autres soucis techniques.',
       icon: 'bi bi-tools'
     },
     {
       title: 'Assemblage sur mesure',
-      description: 'enim enim id voluptatum reiciendis et repudiandae exercitation',
+      description: 'Ordinateur monté selon vos besoins. Nous réalisons des configurations personnalisées selon votre utilisation (bureautique, jeux, montage, etc.) et votre budget.',
       icon: 'bi bi-cpu'
     },
     {
       title: 'Mise à niveau',
-      description: 'enim enim id voluptatum reiciendis et repudiandae exercitation',
+      description: 'Améliorer sans remplacer. Nous mettons à niveau votre ordinateur (ajout de RAM, SSD, carte graphique…) pour prolonger sa durée de vie.',
       icon: 'bi bi-arrow-up-circle'
     },
     {
       title: 'Conseil technique',
-      description: 'enim enim id voluptatum reiciendis et repudiandae exercitation',
+      description: 'Un doute ou une question ? Nous vous aidons à faire les bons choix ou à comprendre les problèmes techniques, que ce soit avant ou après achat.',
       icon: 'bi bi-gear'
     }
   ];
