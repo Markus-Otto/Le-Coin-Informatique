@@ -12,6 +12,33 @@
   flex-wrap: wrap;
 }
 
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  /* existant */
+  background-color: white;
+  border-radius: 0.625rem;
+  padding: 1rem;
+  width: 15rem;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+
+  /* animation ajoutée */
+  animation: slideInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+
 .card {
   background-color: white;
   border-radius: 0.625rem;
