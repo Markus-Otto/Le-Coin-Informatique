@@ -51,9 +51,14 @@
 
 .card:hover {
   transform: translateY(-0.625rem);
-  background-color: #cdcdcd;
+  background-color: #f0f0f0;
   box-shadow: 0 0.62rgb(116, 101, 172)25rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: translateY(-5px); /* petit effet de soulèvement */
+
 }
+
+
 
 
 .card h3 {
@@ -64,7 +69,11 @@
 
 .card p {
   font-size: 0.875rem;
-  color: #666;
+  margin-bottom: 0.625rem;
+}
+.card:hover p {
+  font-size: 0.875rem;
+  color: black;
   margin-bottom: 0.625rem;
 }
 

@@ -1,11 +1,4 @@
-import {
-  Component,
-  HostListener,
-  AfterViewInit,
-  OnDestroy,
-  Inject,
-  PLATFORM_ID,
-} from '@angular/core';
+import {Component,HostListener,AfterViewInit,OnDestroy,Inject,PLATFORM_ID,} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { ScrollService } from '../../services/scroll.service';
 import { CommonModule } from '@angular/common';

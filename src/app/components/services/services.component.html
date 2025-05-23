@@ -1,8 +1,7 @@
 <div class="services-container" id="section2" >
   <h1 class="UL">Mes services</h1>
-  <div class="services-cards">
-    <div class="card" *ngFor="let service of services; let i = index"
-     [style.animationDelay]="(i * 0.3) + 's'">
+  <div class="services-cards"> <!-- partie cards et services -->
+    <div class="card" *ngFor="let service of services; let i = index" [style.animationDelay]="(i * 0.3) + 's'"> <!-- pour chaque services/cards generer cards avec données. -->
   <i [class]="service.icon" style="font-size: 40px; color: #000000;"></i>
   <h3>{{ service.title }}</h3>
   <p>{{ service.description }}</p>
